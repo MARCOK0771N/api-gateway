@@ -1,3 +1,27 @@
 spring:
   application:
     name: api-gateway
+  datasource:
+    url: jdbc:h2:mem:gatewaydb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+feign:
+  client:
+    config:
+      api-service-client:
+        connectTimeout: 5000
+        readTimeout: 10000
+        loggerLevel: full
+api:
+  external-url: http://localhost:8081/sale
+  key: d9f8a7c2-4b1e-11ee-be56-0242ac120002

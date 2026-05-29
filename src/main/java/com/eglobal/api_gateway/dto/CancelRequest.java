@@ -18,6 +18,6 @@ public class CancelRequest {
     private String referencia;
 
     @NotBlank(message = "Estatus no puede estar vacío")
-    @Pattern(regexp = "^(aprobada|cancelada)$", message = "Estatus inválido, debe ser 'aprobada' o 'cancelada'")
+    @Pattern(regexp = "aprobada|cancelar", message = "Estatus inválido, debe ser 'aprobada' o 'cancelar'")
     private String estatus;
 }

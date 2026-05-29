@@ -53,6 +53,7 @@ public class GatewayServiceImpl implements GatewayService {
     @Override
     public void cancel(Long id, CancelRequest request) {
         try {
+            request.setEstatus("cancelado");
             apiServiceClient.cancel(id, request);
         } catch (ResourceAccessException | FeignException e) {
             log.error(MSG_ERROR_FEIGN, e);

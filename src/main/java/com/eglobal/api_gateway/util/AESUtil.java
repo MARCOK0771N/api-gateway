@@ -26,7 +26,7 @@ public class AESUtil {
 
     public static void main(String[] args) throws Exception {
         String key = "claveSecreta1234"; // 16 chars exactos
-        String secretoPlano = "miSecreto123";
+        String secretoPlano = "prueba123";
 
         String secretoCifrado = encrypt(key, secretoPlano);
         System.out.println("Secreto válido: " + secretoCifrado);

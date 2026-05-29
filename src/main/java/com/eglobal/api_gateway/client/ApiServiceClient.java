@@ -17,7 +17,7 @@ public interface ApiServiceClient {
     @GetMapping("/get")
     Page<SaleDto> get(@RequestParam Integer page, @RequestParam Integer size, @RequestParam String sort, @RequestParam String direction);
 
-    @PatchMapping("/{id}")
+    @PutMapping(value = "/{id}")
     void cancel(@PathVariable Long id, @RequestBody CancelRequest request);
 
 }
